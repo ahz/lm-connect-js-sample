@@ -1,0 +1,16 @@
+{
+  "name": "SewebarConnectSample",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "dependencies": {
+    "lm-connect-js": "git://github.com/ahz/lm-connect-js.git#master",
+    "xpath": "0.0.6",
+    "xmldom": "~0.1.19",
+    "grunt": "~0.4.2",
+    "grunt-typescript": "~0.2.7",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "devDependencies": {
+
+  }
+}

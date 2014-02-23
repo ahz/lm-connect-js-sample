@@ -1,0 +1,6 @@
+.DS_Store
+
+/node_modules
+/src/*.js
+/src/*.js.map
+/results_*.xml

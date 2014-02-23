@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen SCHSchema="http://sewebar.vse.cz/schemas/GUHARestr0_1.sch"?>
+<PMML version="4.0" xmlns="http://www.dmg.org/PMML-4_0" xmlns:pmml="http://www.dmg.org/PMML-4_0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_0 http://sewebar.vse.cz/schemas/PMML4.0+GUHA0.1.xsd">
+	<Header copyright="Copyright (c) KIZI UEP">
+		<Extension name="dataset" value="Loans"/>
+		<Extension name="author" value="admin"/>
+		<Extension name="subsystem" value="4ft-Miner"/>
+		<Extension name="module" value="4ftResult.exe"/>
+		<Extension name="format" value="4ftMiner.Task"/>
+		<Application name="SEWEBAR-CMS" version="0.00.01 05.09.2012"/>
+		<Annotation/>
+		<Timestamp>05.09.2012 17:32:17</Timestamp>
+	</Header>
+	<DataDictionary/>
+	<guha:AssociationModel algorithmName="4ft" functionName="associationRules" modelName="295a71ba3d2b707131e5e7f311f967c6cbe7da17" xmlns="" xmlns:guha="http://keg.vse.cz/ns/GUHA0.1rev1" xsi:schemaLocation="http://keg.vse.cz/ns/GUHA0.1rev1 http://sewebar.vse.cz/schemas/GUHA0.1rev1.xsd">
+		<TaskSetting>
+			<Extension name="LISp-Miner">
+				<HypothesesCountMax>250</HypothesesCountMax>
+			</Extension>
+			<Extension name="metabase" value="LM Barbora.mdb MB"/>
+			<BBASettings>
+				<BBASetting id="4">
+					<Text>Age</Text>
+					<Name>Age</Name>
+					<FieldRef>Age</FieldRef>
+					<Coefficient>
+						<Type>Subset</Type>
+						<MinimalLength>1</MinimalLength>
+						<MaximalLength>1</MaximalLength>
+					</Coefficient>
+				</BBASetting>
+				<BBASetting id="7">
+					<Text>Salary</Text>
+					<Name>Salary</Name>
+					<FieldRef>Salary</FieldRef>
+					<Coefficient>
+						<Type>Subset</Type>
+						<MinimalLength>1</MinimalLength>
+						<MaximalLength>1</MaximalLength>
+					</Coefficient>
+				</BBASetting>
+				<BBASetting id="12">
+					<Text>Quality</Text>
+					<Name>Quality</Name>
+					<FieldRef>Quality</FieldRef>
+					<Coefficient>
+						<Type>One category</Type>
+						<Category>good</Category>
+					</Coefficient>
+				</BBASetting>
+			</BBASettings>
+			<DBASettings>
+				<DBASetting id="1" type="Conjunction">
+					<BASettingRef>2</BASettingRef>
+					<BASettingRef>5</BASettingRef>
+					<MinimalLength>1</MinimalLength>
+				</DBASetting>
+				<DBASetting id="2" type="Conjunction">
+					<BASettingRef>3</BASettingRef>
+					<MinimalLength>1</MinimalLength>
+				</DBASetting>
+				<DBASetting id="3" type="Literal">
+					<BASettingRef>4</BASettingRef>
+					<LiteralSign>Positive</LiteralSign>
+				</DBASetting>
+				<DBASetting id="5" type="Conjunction">
+					<BASettingRef>6</BASettingRef>
+					<MinimalLength>1</MinimalLength>
+				</DBASetting>
+				<DBASetting id="6" type="Literal">
+					<BASettingRef>7</BASettingRef>
+					<LiteralSign>Positive</LiteralSign>
+				</DBASetting>
+				<DBASetting id="9" type="Conjunction">
+					<BASettingRef>10</BASettingRef>
+					<MinimalLength>1</MinimalLength>
+				</DBASetting>
+				<DBASetting id="10" type="Conjunction">
+					<BASettingRef>11</BASettingRef>
+					<MinimalLength>1</MinimalLength>
+				</DBASetting>
+				<DBASetting id="11" type="Literal">
+					<BASettingRef>12</BASettingRef>
+					<LiteralSign>Positive</LiteralSign>
+				</DBASetting>
+			</DBASettings>
+			<AntecedentSetting>1</AntecedentSetting>
+			<ConsequentSetting>9</ConsequentSetting>
+			<InterestMeasureSetting>
+				<InterestMeasureThreshold id="8">
+					<InterestMeasure>FUI</InterestMeasure>
+					<Threshold>0.50</Threshold>
+					<ThresholdType>% of all</ThresholdType>
+					<CompareType>Greater than or equal</CompareType>
+				</InterestMeasureThreshold>
+			</InterestMeasureSetting>
+		</TaskSetting>
+		<AssociationRules/>
+	</guha:AssociationModel>
+</PMML>
