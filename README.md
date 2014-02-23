@@ -1,5 +1,7 @@
 # Usage #
 
-`npm install`
-`grunt`
-`node src/index.js`
+```
+npm install
+grunt
+node src/index.js
+```
